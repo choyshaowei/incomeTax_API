@@ -32,6 +32,10 @@ app.post("/api/income-tax", (req: Request, res: Response) => {
   res.send({ ...tax, income, country, countryCode });
 });
 
+app.post("/api/country", (req: Request, res: Response) => {
+  res.send({ ...countryCodes });
+});
+
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
