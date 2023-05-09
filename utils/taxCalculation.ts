@@ -6,6 +6,7 @@ interface CalculateTax {
   taxableAmount: number;
   taxRebate: number;
   taxPercentage: number;
+  takeHomeSalary: number;
   currency?: string;
 }
 
@@ -17,7 +18,8 @@ function calculateTax(
   let tax = 0,
     taxableAmount = 0,
     totalTaxRebate = 0,
-    taxPercentage = 0;
+    taxPercentage = 0,
+    takeHomeSalary = 0;
 
   if (taxRebates) {
     for (const key in taxRebates) {
@@ -38,8 +40,15 @@ function calculateTax(
   }
 
   taxPercentage = (tax / (taxableAmount + totalTaxRebate)) * 100;
+  takeHomeSalary = taxableAmount + totalTaxRebate - tax;
 
-  return { tax, taxableAmount, taxRebate: totalTaxRebate, taxPercentage };
+  return {
+    tax,
+    taxableAmount,
+    taxRebate: totalTaxRebate,
+    takeHomeSalary,
+    taxPercentage,
+  };
 }
 
 export function calculateIncomeTaxes(
@@ -59,6 +68,7 @@ export function calculateIncomeTaxes(
     tax: parseFloat(resp.tax.toFixed(2)),
     taxableAmount: resp.taxableAmount,
     taxRebate: resp.taxRebate,
+    takeHomeSalary: resp.takeHomeSalary,
     taxPercentage: parseFloat(resp.taxPercentage.toFixed(2)),
     currency: currency ?? "NOT FOUND",
   };
