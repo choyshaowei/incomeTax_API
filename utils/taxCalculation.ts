@@ -7,7 +7,7 @@ interface CalculateTax {
   taxRebate: number;
   taxPercentage: number;
   takeHomeSalary: number;
-  currency?: string;
+  currencyCode?: string;
 }
 
 function calculateTax(
@@ -61,7 +61,7 @@ export function calculateIncomeTaxes(
     throw new Error(`Unsupported country code: ${countryCode}`);
   }
 
-  const { taxBrackets, taxRebates, currency } = countryTaxData;
+  const { taxBrackets, taxRebates, currencyCode } = countryTaxData;
   const resp = calculateTax(income, taxBrackets, taxRebates);
 
   return {
@@ -70,6 +70,6 @@ export function calculateIncomeTaxes(
     taxRebate: resp.taxRebate,
     takeHomeSalary: resp.takeHomeSalary,
     taxPercentage: parseFloat(resp.taxPercentage.toFixed(2)),
-    currency: currency ?? "NOT FOUND",
+    currencyCode: currencyCode ?? "LOCAL CURRENCY",
   };
 }

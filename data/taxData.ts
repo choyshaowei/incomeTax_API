@@ -4,7 +4,7 @@ type TaxData = {
   [key in CountryCodeKeys]: {
     taxBrackets: { threshold: number; rate: number }[];
     taxRebates?: { [key: string]: number };
-    currency?: string;
+    currencyCode?: string;
   };
 };
 
@@ -19,7 +19,7 @@ export const taxData: TaxData = {
       { threshold: 100000, rate: 0.21 },
     ],
     taxRebates: { personal: 9000 },
-    currency: "MYR",
+    currencyCode: "MYR",
   },
   UK: {
     taxBrackets: [
@@ -27,7 +27,7 @@ export const taxData: TaxData = {
       { threshold: 50000, rate: 0.2 },
       { threshold: 150000, rate: 0.4 },
     ],
-    currency: "GBP",
+    currencyCode: "GBP",
   },
   US: {
     taxBrackets: [
@@ -35,7 +35,7 @@ export const taxData: TaxData = {
       { threshold: 40125, rate: 0.12 },
       { threshold: 85525, rate: 0.22 },
     ],
-    currency: "USD",
+    currencyCode: "USD",
   },
   CA: {
     taxBrackets: [
@@ -43,7 +43,7 @@ export const taxData: TaxData = {
       { threshold: 64046, rate: 0.205 },
       { threshold: 90563, rate: 0.26 },
     ],
-    currency: "CAD",
+    currencyCode: "CAD",
   },
   AU: {
     taxBrackets: [
@@ -51,7 +51,7 @@ export const taxData: TaxData = {
       { threshold: 45000, rate: 0.19 },
       { threshold: 120000, rate: 0.32 },
     ],
-    currency: "AUD",
+    currencyCode: "AUD",
   },
   NZ: {
     taxBrackets: [
@@ -59,7 +59,7 @@ export const taxData: TaxData = {
       { threshold: 48000, rate: 0.175 },
       { threshold: 70000, rate: 0.3 },
     ],
-    currency: "NZD",
+    currencyCode: "NZD",
   },
   JP: {
     taxBrackets: [
@@ -67,7 +67,7 @@ export const taxData: TaxData = {
       { threshold: 3300000, rate: 0.33 },
       { threshold: 6950000, rate: 0.43 },
     ],
-    currency: "JPY",
+    currencyCode: "JPY",
   },
   KR: {
     taxBrackets: [
@@ -75,7 +75,7 @@ export const taxData: TaxData = {
       { threshold: 46000000, rate: 0.15 },
       { threshold: 88000000, rate: 0.24 },
     ],
-    currency: "KRW",
+    currencyCode: "KRW",
   },
   CN: {
     taxBrackets: [
@@ -83,7 +83,7 @@ export const taxData: TaxData = {
       { threshold: 144000, rate: 0.1 },
       { threshold: 300000, rate: 0.2 },
     ],
-    currency: "CNY",
+    currencyCode: "CNY",
   },
   HK: {
     taxBrackets: [
@@ -92,7 +92,7 @@ export const taxData: TaxData = {
       { threshold: 150000, rate: 0.1 },
       { threshold: 200000, rate: 0.14 },
     ],
-    currency: "HKD",
+    currencyCode: "HKD",
   },
   SG: {
     taxBrackets: [
@@ -102,7 +102,7 @@ export const taxData: TaxData = {
       { threshold: 80000, rate: 0.07 },
       { threshold: 120000, rate: 0.115 },
     ],
-    currency: "SGD",
+    currencyCode: "SGD",
   },
   TW: {
     taxBrackets: [
