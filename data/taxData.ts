@@ -1,5 +1,7 @@
+import { CountryCodeKeys } from "./countryCodes";
+
 type TaxData = {
-  [key: string]: {
+  [key in CountryCodeKeys]: {
     taxBrackets: { threshold: number; rate: number }[];
     taxRebates?: { [key: string]: number };
     currency?: string;
@@ -267,7 +269,6 @@ export const taxData: TaxData = {
     taxBrackets: [{ threshold: 0, rate: 0.15 }],
     taxRebates: { personal: 60000 },
   },
-
   RO: {
     taxBrackets: [{ threshold: 0, rate: 0.1 }],
     taxRebates: { personal: 510 },

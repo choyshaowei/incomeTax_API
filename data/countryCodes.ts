@@ -1,6 +1,7 @@
 interface CountryCodeMapping {
   [key: string]: string;
 }
+export type CountryCodeKeys = keyof typeof countryCodes;
 
 export const countryCodes: CountryCodeMapping = {
   UK: "united-kingdom",

@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { countryCodes } from "./utils/countryCodes";
+import { countryCodes } from "./data/countryCodes";
 import { calculateIncomeTaxes } from "./utils/taxCalculation";
 
 const app = express();
