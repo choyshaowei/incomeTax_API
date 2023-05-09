@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import { countryCodes } from "./utils/countryCodes";
-import { taxCalculations } from "./utils/taxCalculations";
+import { calculateIncomeTaxes } from "./utils/taxCalculation";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -21,16 +21,15 @@ app.post("/api/income-tax", (req: Request, res: Response) => {
   }
 
   const country = countryCodes[countryCode];
-  const calculateTax = taxCalculations[countryCode];
-  if (!country || !calculateTax) {
+  if (!country) {
     return res.status(400).send({
       error:
         'Invalid or missing country code. Supported country codes: "MY" (Malaysia) and "SG" (Singapore).',
     });
   }
 
-  const tax = calculateTax(income);
-  res.send({ income, country, tax });
+  const tax = calculateIncomeTaxes(income, countryCode);
+  res.send({ ...tax, income, country, countryCode });
 });
 
 app.listen(port, () => {
