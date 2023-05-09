@@ -110,6 +110,7 @@ export const taxData: TaxData = {
       { threshold: 1210000, rate: 0.13 },
       { threshold: 2420000, rate: 0.21 },
     ],
+    currencyCode: "TWD",
   },
   IN: {
     taxBrackets: [
@@ -118,6 +119,7 @@ export const taxData: TaxData = {
       { threshold: 1000000, rate: 0.2 },
     ],
     taxRebates: { section80C: 150000 },
+    currencyCode: "INR",
   },
   ID: {
     taxBrackets: [
@@ -125,6 +127,7 @@ export const taxData: TaxData = {
       { threshold: 250000000, rate: 0.15 },
       { threshold: 500000000, rate: 0.25 },
     ],
+    currencyCode: "IDR",
   },
   TH: {
     taxBrackets: [
@@ -133,6 +136,7 @@ export const taxData: TaxData = {
       { threshold: 500000, rate: 0.15 },
     ],
     taxRebates: { personal: 60000 },
+    currencyCode: "THB",
   },
   VN: {
     taxBrackets: [
@@ -140,6 +144,7 @@ export const taxData: TaxData = {
       { threshold: 10000000, rate: 0.1 },
       { threshold: 18000000, rate: 0.15 },
     ],
+    currencyCode: "VND",
   },
   PH: {
     taxBrackets: [
@@ -148,6 +153,7 @@ export const taxData: TaxData = {
       { threshold: 800000, rate: 0.25 },
     ],
     taxRebates: { personal: 50000 },
+    currencyCode: "PHP",
   },
   FR: {
     taxBrackets: [
@@ -155,8 +161,8 @@ export const taxData: TaxData = {
       { threshold: 25710, rate: 0.11 },
       { threshold: 73516, rate: 0.3 },
     ],
+    currencyCode: "EUR",
   },
-
   DE: {
     taxBrackets: [
       { threshold: 9744, rate: 0 },
@@ -164,6 +170,7 @@ export const taxData: TaxData = {
       { threshold: 57918, rate: 0.42 },
     ],
     taxRebates: { advertisingCosts: 800 },
+    currencyCode: "EUR",
   },
   IT: {
     taxBrackets: [
@@ -171,8 +178,8 @@ export const taxData: TaxData = {
       { threshold: 28000, rate: 0.27 },
       { threshold: 55000, rate: 0.38 },
     ],
+    currencyCode: "EUR",
   },
-
   ES: {
     taxBrackets: [
       { threshold: 12450, rate: 0.19 },
@@ -180,6 +187,7 @@ export const taxData: TaxData = {
       { threshold: 35200, rate: 0.3 },
     ],
     taxRebates: { personal: 2000 },
+    currencyCode: "EUR",
   },
   PT: {
     taxBrackets: [
@@ -187,6 +195,7 @@ export const taxData: TaxData = {
       { threshold: 10732, rate: 0.23 },
       { threshold: 20322, rate: 0.28 },
     ],
+    currencyCode: "EUR",
   },
   NL: {
     taxBrackets: [
@@ -194,6 +203,7 @@ export const taxData: TaxData = {
       { threshold: 70000, rate: 0.49 },
     ],
     taxRebates: { personal: 3000 },
+    currencyCode: "EUR",
   },
   BE: {
     taxBrackets: [
@@ -202,6 +212,7 @@ export const taxData: TaxData = {
       { threshold: 42790, rate: 0.45 },
     ],
     taxRebates: { mortgageInterest: 1520 },
+    currencyCode: "EUR",
   },
   CH: {
     taxBrackets: [
@@ -209,6 +220,7 @@ export const taxData: TaxData = {
       { threshold: 108064, rate: 0.02 },
       { threshold: 171064, rate: 0.04 },
     ],
+    currencyCode: "CHF",
   },
   AT: {
     taxBrackets: [
@@ -217,6 +229,7 @@ export const taxData: TaxData = {
       { threshold: 31000, rate: 0.42 },
     ],
     taxRebates: { advertisingCosts: 132 },
+    currencyCode: "EUR",
   },
   DK: {
     taxBrackets: [
@@ -225,6 +238,7 @@ export const taxData: TaxData = {
       { threshold: 56300, rate: 0.28 },
     ],
     taxRebates: { transportDeduction: 32000 },
+    currencyCode: "DKK",
   },
   SE: {
     taxBrackets: [
@@ -232,13 +246,16 @@ export const taxData: TaxData = {
       { threshold: 675700, rate: 0.52 },
     ],
     taxRebates: { studyDeduction: 40000 },
+    currencyCode: "SEK",
   },
+
   NO: {
     taxBrackets: [
       { threshold: 180800, rate: 0.22 },
       { threshold: 254500, rate: 0.28 },
       { threshold: 639750, rate: 0.375 },
     ],
+    currencyCode: "NOK",
   },
   FI: {
     taxBrackets: [
@@ -246,36 +263,45 @@ export const taxData: TaxData = {
       { threshold: 30000, rate: 0.17 },
       { threshold: 72000, rate: 0.31 },
     ],
+    currencyCode: "EUR",
   },
   RU: {
     taxBrackets: [{ threshold: 0, rate: 0.13 }],
+    currencyCode: "RUB",
   },
   UA: {
     taxBrackets: [{ threshold: 0, rate: 0.05 }],
     taxRebates: { personal: 1600 },
+    currencyCode: "UAH",
   },
   PL: {
     taxBrackets: [{ threshold: 0, rate: 0.17 }],
     taxRebates: { personal: 1360 },
+    currencyCode: "PLN",
   },
   CZ: {
     taxBrackets: [{ threshold: 0, rate: 0.15 }],
+    currencyCode: "CZK",
   },
   SK: {
     taxBrackets: [{ threshold: 0, rate: 0.19 }],
+    currencyCode: "EUR",
   },
 
   HU: {
     taxBrackets: [{ threshold: 0, rate: 0.15 }],
     taxRebates: { personal: 60000 },
+    currencyCode: "HUF",
   },
   RO: {
     taxBrackets: [{ threshold: 0, rate: 0.1 }],
     taxRebates: { personal: 510 },
+    currencyCode: "RON",
   },
   BG: {
     taxBrackets: [{ threshold: 0, rate: 0.1 }],
     taxRebates: { personal: 2270 },
+    currencyCode: "BGN",
   },
   GR: {
     taxBrackets: [
@@ -283,13 +309,16 @@ export const taxData: TaxData = {
       { threshold: 30000, rate: 0.29 },
       { threshold: 45000, rate: 0.37 },
     ],
+    currencyCode: "EUR",
   },
   TR: {
     taxBrackets: [{ threshold: 0, rate: 0.15 }],
+    currencyCode: "TRY",
   },
   EG: {
     taxBrackets: [{ threshold: 0, rate: 0.1 }],
     taxRebates: { personal: 7000 },
+    currencyCode: "EGP",
   },
   ZA: {
     taxBrackets: [
@@ -297,6 +326,7 @@ export const taxData: TaxData = {
       { threshold: 321600, rate: 0.26 },
       { threshold: 445100, rate: 0.31 },
     ],
+    currencyCode: "ZAR",
   },
   BR: {
     taxBrackets: [
@@ -305,10 +335,12 @@ export const taxData: TaxData = {
       { threshold: 45012.6, rate: 0.225 },
     ],
     taxRebates: { dependent: 229.47 },
+    currencyCode: "BRL",
   },
   AR: {
     taxBrackets: [{ threshold: 0, rate: 0.09 }],
     taxRebates: { personal: 27416 },
+    currencyCode: "ARS",
   },
   MX: {
     taxBrackets: [
@@ -317,16 +349,20 @@ export const taxData: TaxData = {
       { threshold: 150800, rate: 0.03 },
     ],
     taxRebates: { personal: 125900 },
+    currencyCode: "MXN",
   },
   CL: {
     taxBrackets: [{ threshold: 0, rate: 0.08 }],
+    currencyCode: "CLP",
   },
   CO: {
     taxBrackets: [{ threshold: 0, rate: 0.19 }],
     taxRebates: { personal: 200000 },
+    currencyCode: "COP",
   },
   PE: {
     taxBrackets: [{ threshold: 0, rate: 0.08 }],
     taxRebates: { personal: 21600 },
+    currencyCode: "PEN",
   },
 };
