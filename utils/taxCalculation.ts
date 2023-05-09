@@ -1,4 +1,5 @@
 import { taxData } from "../data/taxData";
+import { isPositive } from "./math";
 
 interface CalculateTax {
   tax: number;
@@ -27,7 +28,7 @@ function calculateTax(
     }
   }
 
-  taxableAmount = income;
+  taxableAmount = isPositive(income) ? income : 0;
 
   for (let i = taxBrackets.length - 1; i >= 0; i--) {
     if (income > taxBrackets[i].threshold) {
