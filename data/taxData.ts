@@ -17,9 +17,28 @@ export const taxData: TaxData = {
       { threshold: 50000, rate: 0.08 },
       { threshold: 70000, rate: 0.14 },
       { threshold: 100000, rate: 0.21 },
+      { threshold: 250000, rate: 0.24 },
+      { threshold: 400000, rate: 0.245 },
+      { threshold: 600000, rate: 0.25 },
+      { threshold: 1000000, rate: 0.26 },
     ],
     taxRebates: { personal: 9000 },
     currencyCode: "MYR",
+  },
+  SG: {
+    taxBrackets: [
+      { threshold: 20000, rate: 0 },
+      { threshold: 30000, rate: 0.02 },
+      { threshold: 40000, rate: 0.035 },
+      { threshold: 80000, rate: 0.07 },
+      { threshold: 120000, rate: 0.115 },
+      { threshold: 160000, rate: 0.15 },
+      { threshold: 200000, rate: 0.18 },
+      { threshold: 240000, rate: 0.19 },
+      { threshold: 280000, rate: 0.195 },
+      { threshold: 320000, rate: 0.2 },
+    ],
+    currencyCode: "SGD",
   },
   UK: {
     taxBrackets: [
@@ -93,16 +112,6 @@ export const taxData: TaxData = {
       { threshold: 200000, rate: 0.14 },
     ],
     currencyCode: "HKD",
-  },
-  SG: {
-    taxBrackets: [
-      { threshold: 20000, rate: 0 },
-      { threshold: 30000, rate: 0.02 },
-      { threshold: 40000, rate: 0.035 },
-      { threshold: 80000, rate: 0.07 },
-      { threshold: 120000, rate: 0.115 },
-    ],
-    currencyCode: "SGD",
   },
   TW: {
     taxBrackets: [

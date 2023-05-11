@@ -6,8 +6,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.get("/api/country", (req: Request, res: Response) => {
+  res.send({ ...countryCodes });
 });
 
 app.post("/api/income-tax", (req: Request, res: Response) => {
@@ -24,16 +24,12 @@ app.post("/api/income-tax", (req: Request, res: Response) => {
   if (!country) {
     return res.status(400).send({
       error:
-        'Invalid or missing country code. Supported country codes: "MY" (Malaysia) and "SG" (Singapore).',
+        "Invalid or missing country code. Send a GET request to '/api/country' to get the supported country.",
     });
   }
 
   const tax = calculateIncomeTaxes(income, countryCode);
   res.send({ ...tax, income, country, countryCode });
-});
-
-app.post("/api/country", (req: Request, res: Response) => {
-  res.send({ ...countryCodes });
 });
 
 app.listen(port, () => {
