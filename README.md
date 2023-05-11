@@ -2,6 +2,9 @@
 
 The Income Tax API is a RESTful API that allows you to calculate income taxes for individuals based on their income and country code. The API supports multiple countries, as listed in the `countryCodes` object.
 
+## API Sandbox
+https://incometax-api.onrender.com
+
 ## Table of Contents
 
 - [Installation](#installation)
