@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
-    "start": "ts-node app.ts",
+    "start": "pm2 start --interpreter ./node_modules/.bin/ts-node --name my-app app.ts",
     "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,13 +19,14 @@
   },
   "homepage": "https://github.com/choyshaowei/incomeTax_API#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "pm2": "^5.3.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/node": "^16.11.12",
     "nodemon": "^2.0.22",
-    "ts-node": "^10.4.0",
+    "ts-node": "^10.9.1",
     "typescript": "^4.5.2"
   }
 }
