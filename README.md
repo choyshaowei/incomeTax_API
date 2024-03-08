@@ -49,7 +49,7 @@ The API should now be running on http://localhost:3000.
 The Income Tax API offers the following endpoints:
 
 - `POST /api/income-tax`: Calculate income tax based on provided income and country code.
-- `POST /api/country`: Retrieve a list of supported country codes and corresponding country names.
+- `GET /api/country`: Retrieve a list of supported country codes and corresponding country names.
 
 ### Examples
 
