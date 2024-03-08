@@ -83,7 +83,7 @@ The response will include the calculated tax, income, country, and country code:
 To retrieve a list of supported country codes and corresponding country names:
 
 ```
-POST /api/country
+GET /api/country
 ```
 
 The response will include the supported country codes and corresponding country names:
